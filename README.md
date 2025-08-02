@@ -25,11 +25,11 @@ Android端SQL注入靶场测试工具，**仅用于网络安全教学**，请勿
 
 ## 开发者信息
 - **作者**: 是依蚊呀
-- **B站**: [是依蚊呀](https://space.bilibili.com/yourid)
+- **B站**: [是依蚊呀](https://search.bilibili.com/all?keyword=%E6%98%AF%E4%BE%9D%E8%9A%8A%E5%91%80&from_source=webtop_search&spm_id_from=333.1007&search_source=2)
 - **交流群**: 818461934 (加群请备注GitHub)
 
 ##  开源地址
-[GitHub Repository](https://github.com/yourname/SQLInjector)
+[GitHub Repository](https://github.com/yiwenzc/shibendan)
 
 ## 构建指南
 1. 克隆项目
