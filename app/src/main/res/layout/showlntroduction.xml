@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/material_dynamic_primary95"
+    android:fitsSystemWindows="true">
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:cardBackgroundColor="@color/material_dynamic_primary99"
+        app:cardElevation="4dp"
+        app:strokeColor="@color/material_dynamic_primary60"
+        app:strokeWidth="1dp"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.LargeComponent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- 威胁警示卡片 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@color/material_dynamic_primary40"
+                    app:cardElevation="8dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.LargeComponent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="SQL注入是什么?"
+                            android:textColor="@android:color/white"
+                            android:textSize="32sp"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:letterSpacing="0.05"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="黑客的必备武器 · 网站的致命威胁\n手滑代码送惊喜>老板血压直升机"
+                            android:textColor="#CCFFFFFF"
+                            android:textSize="18sp"
+                            android:textAlignment="center"
+                            android:layout_marginBottom="16dp"/>
+
+
+
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="OWASP十大漏洞榜首"
+                            android:textColor="@android:color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:chipIcon="@drawable/ic_crown"
+                            app:chipIconTint="@color/material_dynamic_primary90"
+                            app:chipBackgroundColor="#99000000"
+                            app:chipStrokeColor="@color/material_dynamic_primary80"
+                            app:chipStrokeWidth="1dp"
+                            app:iconStartPadding="0dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 数据统计卡片 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@color/material_dynamic_primary95"
+                    app:cardElevation="6dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.MediumComponent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:drawablePadding="12dp"
+                            android:text="2025年最新漏洞统计报告\n(或许很快就不新了QAQ)"
+                            android:textColor="@color/material_dynamic_primary30"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            app:drawableStartCompat="@drawable/ic_bar_chart"
+                            app:drawableTint="@color/material_dynamic_primary30" />
+
+                        <!-- 数据图表 -->
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progress2019"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layoutDirection="ltr"
+                            app:indicatorColor="@color/material_dynamic_primary40"
+                            app:trackColor="@color/material_dynamic_primary90"
+                            app:trackThickness="8dp" />
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progress2021"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:layoutDirection="ltr"
+                            app:indicatorColor="@color/material_dynamic_primary40"
+                            app:trackColor="@color/material_dynamic_primary90"
+                            app:trackThickness="8dp" />
+
+                        <com.google.android.material.progressindicator.LinearProgressIndicator
+                            android:id="@+id/progress2025"
+                            android:layout_width="match_parent"
+                            android:layout_height="8dp"
+                            android:layout_marginBottom="20dp"
+                            android:layoutDirection="ltr"
+                            app:indicatorColor="@color/material_dynamic_primary40"
+                            app:trackColor="@color/material_dynamic_primary90"
+                            app:trackThickness="8dp" />
+
+                        <!-- 2025年数据 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="24dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="2025"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="8%"
+                                android:textAlignment="center"
+                                android:textColor="@color/material_dynamic_primary40"
+                                android:textSize="24sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="59dp"
+                                android:layout_weight="2"
+                                android:text="Acunetix扫描网站存在SQL注入漏洞"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <!-- 趋势对比 -->
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:text="历史趋势"
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="2019"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="15%"
+                                android:textAlignment="center"
+                                android:textColor="@color/material_dynamic_primary40"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="每6.5个网站中有1个存在漏洞"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="2021"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="10%"
+                                android:textAlignment="center"
+                                android:textColor="@color/material_dynamic_primary40"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="每10个网站中有1个存在漏洞"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="2025"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="8%"
+                                android:textAlignment="center"
+                                android:textColor="@color/material_dynamic_primary40"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="每12个网站中有1个存在漏洞"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontStyle="italic"
+                            android:text="数据来源: Acunetix Web Application Vulnerability Report 2025\n(ps:这个数据也是我刚查AI查百度得到的QAQ)"
+                            android:textColor="@color/material_dynamic_primary30"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 黑客技能卡片 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="@color/material_dynamic_primary95"
+                    app:cardElevation="6dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.MediumComponent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="黑客的必备武器(真的!)"
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="16dp"
+                            app:drawableStartCompat="@drawable/ic_hacker"
+                            app:drawableTint="@color/material_dynamic_primary30"
+                            android:drawablePadding="12dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="无论黑客技术如何演进，SQL注入始终是渗透测试者和攻击者的核心技能。"
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="16sp"
+                            android:lineSpacingMultiplier="1.2"
+                            android:layout_marginBottom="16dp"/>
+
+                        <com.google.android.material.divider.MaterialDivider
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginVertical="8dp"
+                            app:color="@color/material_dynamic_primary90"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="• 唯一无法绕过的黑客技能"
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="8dp"
+                            android:drawablePadding="8dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="• 所有渗透测试认证的必考科目"
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="16sp"
+                            android:layout_marginBottom="8dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="• 90%的数据泄露事件利用点"
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- 破坏性影响卡片 -->
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/material_dynamic_primary95"
+                    app:cardElevation="6dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.MediumComponent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="灾难性的后果"
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="16dp"
+                            app:drawableStartCompat="@drawable/check"
+                            app:drawableTint="@color/material_dynamic_error40"
+                            android:drawablePadding="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_database"
+                                android:tint="@color/material_dynamic_error40"
+                                android:layout_marginEnd="12dp"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="直接获取整个数据库内容"
+                                android:textColor="@color/material_dynamic_error40"
+                                android:textSize="18sp"
+                                android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="一次成功的SQL注入攻击可能导致："
+                            android:textColor="@color/material_dynamic_primary20"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="12dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_warning"
+                                android:tint="@color/material_dynamic_error40"
+                                android:layout_marginEnd="8dp"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="百万用户数据直接泄露"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_warning"
+                                android:tint="@color/material_dynamic_error40"
+                                android:layout_marginEnd="8dp"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="敏感信息完全暴露（密码、银行卡、个人信息）"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="8dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_warning"
+                                android:tint="@color/material_dynamic_error40"
+                                android:layout_marginEnd="8dp"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="系统权限全面沦陷(也不一定?)"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginBottom="16dp">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_warning"
+                                android:tint="@color/material_dynamic_error40"
+                                android:layout_marginEnd="8dp"
+                                tools:ignore="UseAppTint" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="企业被喷成狗"
+                                android:textColor="@color/material_dynamic_primary20"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <com.google.android.material.chip.Chip
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="大规模泄露多由SQL注入引发"
+                            android:textColor="@color/material_dynamic_error40"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            app:chipBackgroundColor="@color/material_dynamic_error95"
+                            app:chipStrokeColor="@color/material_dynamic_error40"
+                            app:chipStrokeWidth="1dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- FAB -->
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom|end"
+        android:text="退出介绍"
+        app:icon="@drawable/ic_info"
+        app:iconTint="@android:color/white"
+        app:backgroundTint="@color/material_dynamic_primary40"
+        app:cornerRadius="16dp"
+        app:elevation="6dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

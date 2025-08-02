@@ -1,0 +1,101 @@
+<!-- res/layout/nav_author_info.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="240dp"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="start"
+    android:background="#161b22"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+<!-- 头像区 -->
+<ImageView
+    android:layout_width="64dp"
+    android:layout_height="64dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="24dp"
+    android:src="@drawable/zuozhe"
+    tools:ignore="UseAppTint" />
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="是依蚊呀"
+    android:textColor="#FF5252"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:layout_marginTop="16dp"
+    android:fontFamily="monospace"/>
+
+<!-- 分隔线 -->
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="#30363d"
+    android:layout_marginVertical="16dp"/>
+
+<!-- 简洁信息 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="• DH-T普通成员(欢迎加入) "
+        android:textColor="#8b949e"
+        android:textSize="14sp"
+        android:lineSpacingExtra="6dp"
+        android:fontFamily="monospace"/>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="• Android开发者"
+    android:textColor="#8b949e"
+    android:textSize="14sp"
+    android:lineSpacingExtra="6dp"
+    android:fontFamily="monospace"
+    android:layout_marginTop="5dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="• 逻辑学爱好者"
+        android:textColor="#8b949e"
+        android:textSize="14sp"
+        android:lineSpacingExtra="6dp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text='• B站up主"是依蚊呀"(求关注)'
+        android:textColor="#8b949e"
+        android:textSize="14sp"
+        android:lineSpacingExtra="6dp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="5dp"/>
+
+
+<!-- GitHub链接 -->
+<com.google.android.material.button.MaterialButton
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="GitHub开源链接"
+    android:textColor="#e6edf3"
+    android:layout_marginTop="24dp"
+    android:onClick="onGithubClick"
+    app:icon="@drawable/ic_github"
+    app:iconTint="#3fb950"
+    app:backgroundTint="#238636"
+    app:cornerRadius="4dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text='本项目已于github MIT协议开源(请遵守MIT协议使用),欢迎前往查看QAQ,您也可以加入qq群聊818461934进行交流,软件偏教程性,仅为测试靶场,请勿用于真实的攻击环境,最后谢谢您的下载!'
+        android:textColor="#7BCE2F"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:layout_marginTop="5dp"/>
+
+</LinearLayout>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0d1117">
+
+<LinearLayout
+    android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="#0d1117"
+android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="15dp">
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <!-- 菜单按钮（现在和标题同行） -->
+        <ImageButton
+            android:id="@+id/btn_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginEnd="12dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_menu"
+            android:tint="#3fb950"
+            tools:ignore="UseAppTint,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <!-- 标题（保持原有样式） -->
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SQL Injector  v0.10"
+            android:textColor="#2ea043"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+<!-- 标题栏 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="笨蛋の注入盒子"
+        android:textColor="#2ea043"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:gravity="right"
+        android:fontFamily="monospace"
+        />
+
+
+    <!-- 目标URL输入 -->
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:boxBackgroundColor="#161b22"
+    app:hintTextColor="#848d97"
+    app:boxStrokeColor="#30363d"
+    android:hint="目标网址"
+    android:textColorHint="#848d97">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etTargetUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="http://192.168.1.9/sqli/Less-1/"
+        android:textColor="#e6edf3"
+        android:inputType="textUri"
+        android:fontFamily="monospace"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+<!-- 注入点参数 -->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="16dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:boxBackgroundColor="#161b22"
+        app:hintTextColor="#848d97"
+        app:boxStrokeColor="#30363d"
+        android:hint="易受攻击参数"
+        android:textColorHint="#848d97"
+        android:layout_marginEnd="8dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etParameter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="username"
+            android:textColor="#e6edf3"
+            android:fontFamily="monospace"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDetect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="自动检测"
+        app:backgroundTint="#238636"
+        android:textAllCaps="false"
+        app:cornerRadius="4dp"/>
+</LinearLayout>
+
+<!-- 注入Payload输入 -->
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="注入载荷区(可选):"
+    android:textColor="#848d97"
+    android:layout_marginTop="20dp"/>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    app:boxBackgroundColor="#161b22"
+    app:boxStrokeColor="#30363d">
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etPayload"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:gravity="top"
+        android:text="例:admin' OR 1=1--\n自动模式下无需填写"
+        android:textColor="#e6edf3"
+        android:fontFamily="monospace"
+        android:inputType="textMultiLine"
+        android:enabled="false"/>
+</com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="攻击模式区:"
+        android:textColor="#848d97"
+        android:layout_marginTop="20dp"/>
+
+    <RadioGroup
+        android:id="@+id/radioModeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+
+        <RadioButton
+            android:id="@+id/radioAuto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="自动"
+            android:textColor="#e6edf3"
+            android:buttonTint="#238636"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioManual"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="手动"
+            android:textColor="#e6edf3"
+            android:buttonTint="#238636"/>
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/radioAttackTypeGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:visibility="visible">
+
+        <RadioButton
+            android:id="@+id/radioErrorBased"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="基于错误"
+            android:textColor="#e6edf3"
+            android:buttonTint="#238636"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/radioTimeBased"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="时间盲注"
+            android:textColor="#e6edf3"
+            android:buttonTint="#238636"/>
+
+        <RadioButton
+            android:id="@+id/radioUnion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="联合注入"
+            android:textColor="#e6edf3"
+            android:buttonTint="#238636"/>
+    </RadioGroup>
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+<!-- 控制按钮 -->
+<Button
+    android:id="@+id/btnInject"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="START INJECTION"
+    android:textColor="@android:color/white"
+    android:backgroundTint="#da3633"
+    android:layout_marginTop="32dp"
+    android:fontFamily="monospace"
+    android:textSize="16sp"
+    android:drawableStart="@drawable/ic_back"
+    android:drawablePadding="8dp"
+    app:cornerRadius="4dp"/>
+
+
+    <!-- 优化后的结果显示区 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:background="#161b22"
+        android:padding="12dp">
+
+        <!-- 结果标题栏 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            tools:ignore="ExtraText">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_hacker"
+                app:tint="#3fb950" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" 注入结果"
+                android:textColor="#3fb950"
+                android:textSize="14sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- 分隔线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#30363d"
+            android:layout_marginTop="8dp"/>
+
+        <!-- 可滚动的结果内容 -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/tvResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:lineSpacingExtra="4dp"
+                android:text=""
+                android:textColor="#8b949e"
+                android:textIsSelectable="true"
+                android:textSize="12sp"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>
+    <include layout="@layout/nav_author_info"/>
+</androidx.drawerlayout.widget.DrawerLayout>
